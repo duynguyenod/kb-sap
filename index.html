@@ -195,15 +195,15 @@
       </a>
     </div>
     <div class="form-container">
-      <input id="name" class="my-input" placeholder="Tên" required />
-      <input id="personal-id" class="my-input" placeholder="CMND" required />
+      <input id="name" class="my-input" placeholder="Tên nhân viên" required />
+      <input id="personal-id" class="my-input" placeholder="CMND nhân viên" required />
       <input
         id="super-market"
         class="my-input"
-        placeholder="Siêu thị"
+        placeholder="Siêu thị làm việc"
         required
       />
-      <button id="submit-button" disabled>Đăng ký Starguide</button>
+      <button id="submit-button" disabled>Chuyển đến trang Starguide</button>
     </div>
 
     <script>
@@ -259,7 +259,7 @@
         const superMarket = change_alias(superMarketInput.value);
 
         window.open(
-          `https://www.sapporo-starguide.com/vi_VN/account/register?utm_source=KingBee&utm_medium=referral&utm_campaign=BA_Festive_2021&utm_content=${name}_${personalId}_${superMarket}&redirect=https://www.sapporo-starguide.com/`
+          `https://www.sapporo-starguide.com/vi_VN/account/register?redirect=https://www.sapporo-starguide.com&utm_source=Kingbee&utm_medium=Offline&utm_campaign=${name}_${personalId}_${superMarket}`
         );
       });
     </script>
