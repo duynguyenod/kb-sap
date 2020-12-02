@@ -124,6 +124,10 @@
         box-shadow: 0 0 0 0.25rem rgba(245, 130, 32, 0.25);
       }
 
+      .my-input:disabled {
+        background-color: lightgray;
+      }
+
       .logo-container {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -154,6 +158,9 @@
         font-size: inherit;
         line-height: inherit;
         margin-top: 20px;
+      }
+      #reset-button {
+        margin-right: 20px;
       }
 
       button:focus {
@@ -196,21 +203,44 @@
     </div>
     <div class="form-container">
       <input id="name" class="my-input" placeholder="Tên nhân viên" required />
-      <input id="personal-id" class="my-input" placeholder="CMND nhân viên" required />
+      <input
+        id="personal-id"
+        class="my-input"
+        placeholder="CMND nhân viên"
+        required
+      />
       <input
         id="super-market"
         class="my-input"
         placeholder="Siêu thị làm việc"
         required
       />
-      <button id="submit-button" disabled>Chuyển đến trang Starguide</button>
+      <div style="display: flex;">
+        <button id="reset-button" disabled>Thay đổi thông tin</button>
+        <button id="submit-button" disabled>Chuyển đến trang Starguide</button>
+      </div>
     </div>
 
     <script>
+      const savedName = localStorage.getItem("name");
+      const savedPersonalId = localStorage.getItem("personalId");
+      const savedMarket = localStorage.getItem("market");
       const button = document.getElementById("submit-button");
+      const resetButton = document.getElementById("reset-button");
       const nameInput = document.getElementById("name");
       const personalIdInput = document.getElementById("personal-id");
       const superMarketInput = document.getElementById("super-market");
+
+      if (savedName && savedPersonalId && savedMarket) {
+        nameInput.value = savedName;
+        personalIdInput.value = savedPersonalId;
+        superMarketInput.value = savedMarket;
+        nameInput.disabled = true;
+        personalIdInput.disabled = true;
+        superMarketInput.disabled = true;
+        resetButton.disabled = false;
+        checkInput();
+      }
 
       nameInput.addEventListener("focusout", () => {
         checkInput();
@@ -253,11 +283,24 @@
         return str;
       }
 
+      resetButton.addEventListener("click", () => {
+        nameInput.disabled = false;
+        personalIdInput.disabled = false;
+        superMarketInput.disabled = false;
+        resetButton.disabled = true;
+      });
+
       button.addEventListener("click", () => {
         const name = change_alias(nameInput.value);
         const personalId = change_alias(personalIdInput.value);
         const superMarket = change_alias(superMarketInput.value);
-
+        localStorage.setItem("name", name);
+        localStorage.setItem("personalId", personalId);
+        localStorage.setItem("market", superMarket);
+        nameInput.disabled = true;
+        personalIdInput.disabled = true;
+        superMarketInput.disabled = true;
+        resetButton.disabled = false;
         window.open(
           `https://www.sapporo-starguide.com/vi_VN/account/register?redirect=http://starspin.sapporo-starguide.com/&utm_source=Kingbee&utm_medium=Offline&utm_campaign=${name}_${personalId}_${superMarket}`
         );
