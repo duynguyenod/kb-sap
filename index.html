@@ -357,9 +357,9 @@
         const name = change_alias(nameInput.value);
         const personalId = change_alias(personalIdInput.value);
         const superMarket = change_alias(superMarketInput.value);
-        localStorage.setItem("name", name);
-        localStorage.setItem("personalId", personalId);
-        localStorage.setItem("market", superMarket);
+        localStorage.setItem("name", nameInput.value);
+        localStorage.setItem("personalId", personalIdInput.value);
+        localStorage.setItem("market", superMarketInput.value);
         nameInput.disabled = true;
         personalIdInput.disabled = true;
         superMarketInput.disabled = true;
