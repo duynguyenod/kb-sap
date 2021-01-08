@@ -1,390 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KingBee</title>
-    <style>
-      /*
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KingBee</title>
+  <style>
+    /*
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v7.0.29,
 * Autoprefixer: v9.7.6
 * Browsers: last 4 version
 */
 
-      @charset "UTF-8";
-      :root {
-        --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
-          "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
-          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-          "Noto Color Emoji";
-        --primary-color: #ffb347;
-      }
-      *,
-      *:before,
-      *:after {
-        -webkit-box-sizing: inherit;
-        box-sizing: inherit;
-      }
+    @charset "UTF-8";
 
-      body {
-        min-height: 100vh;
-        margin: 0;
-        font-family: var(--bs-font-sans-serif);
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.5;
-        color: #212529;
+    :root {
+      --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+      --primary-color: #ffb347;
+    }
 
-        -webkit-text-size-adjust: 100%;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        background-image: url(https://kingbee.vn/wp-content/uploads/2018/12/clien-banner.jpg?id=15889);
-        background-repeat: no-repeat;
-        background-position: bottom;
+    *,
+    *:before,
+    *:after {
+      -webkit-box-sizing: inherit;
+      box-sizing: inherit;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: var(--bs-font-sans-serif);
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #212529;
+
+      -webkit-text-size-adjust: 100%;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      background-image: url(https://kingbee.vn/wp-content/uploads/2018/12/clien-banner.jpg?id=15889);
+      background-repeat: no-repeat;
+      background-position: bottom;
+    }
+
+    .form-container {
+      max-width: 430px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      background-color: var(--primary-color);
+      margin: 0 auto 20px;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+      padding: 20px;
+    }
+
+    .form-container label {
+      text-align: left;
+      width: 100%;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .my-input {
+      display: block;
+      width: 256px;
+      padding: 0.375rem 0.75rem;
+      margin-top: 20px;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #212529;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid #ced4da;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border-radius: 0.25rem;
+      -webkit-transition: border-color 0.15s ease-in-out,
+        -webkit-box-shadow 0.15s ease-in-out;
+      transition: border-color 0.15s ease-in-out,
+        -webkit-box-shadow 0.15s ease-in-out;
+      -o-transition: border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+        -webkit-box-shadow 0.15s ease-in-out;
+    }
+
+    .my-input:focus {
+      color: #212529;
+      background-color: #fff;
+      border-color: #f58220;
+      outline: 0;
+      -webkit-box-shadow: 0 0 0 0.25rem rgba(245, 130, 32, 0.25);
+      box-shadow: 0 0 0 0.25rem rgba(245, 130, 32, 0.25);
+    }
+
+    .my-input:disabled {
+      background-color: lightgray;
+    }
+
+    .logo-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-bottom: 100px;
+    }
+
+    .logo-container img {
+      max-width: 150px;
+    }
+
+    button {
+      border: 1px solid #212529;
+      color: #212529;
+      background-color: transparent;
+      border-radius: 0;
+      text-transform: none;
+      cursor: pointer;
+      -webkit-appearance: button;
+      margin: 0;
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      margin-top: 20px;
+    }
+
+    #reset-button {
+      margin-right: 20px;
+    }
+
+    button:focus {
+      outline: dotted 1px;
+      outline: -webkit-focus-ring-color auto 5px;
+    }
+
+    button:disabled {
+      border-color: gray;
+      color: gray;
+    }
+
+    @media only screen and (max-width: 1080px) {
+      .container {
+        width: 70%;
       }
+    }
 
-      .form-container {
-        max-width: 430px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        background-color: var(--primary-color);
-        margin: 0 auto 20px;
-        border: 1px solid transparent;
-        border-radius: 4px;
-        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-        padding: 20px;
-      }
-
-      .form-container label {
-        text-align: left;
+    @media only screen and (max-width: 768px) {
+      .container {
         width: 100%;
-        font-size: 12px;
-        font-weight: bold;
-        margin-bottom: 5px;
       }
+    }
+  </style>
+</head>
 
-      .my-input {
-        display: block;
-        width: 256px;
-        padding: 0.375rem 0.75rem;
-        margin-top: 20px;
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.5;
-        color: #212529;
-        background-color: #fff;
-        background-clip: padding-box;
-        border: 1px solid #ced4da;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        border-radius: 0.25rem;
-        -webkit-transition: border-color 0.15s ease-in-out,
-          -webkit-box-shadow 0.15s ease-in-out;
-        transition: border-color 0.15s ease-in-out,
-          -webkit-box-shadow 0.15s ease-in-out;
-        -o-transition: border-color 0.15s ease-in-out,
-          box-shadow 0.15s ease-in-out;
-        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
-          -webkit-box-shadow 0.15s ease-in-out;
-      }
-
-      .my-input:focus {
-        color: #212529;
-        background-color: #fff;
-        border-color: #f58220;
-        outline: 0;
-        -webkit-box-shadow: 0 0 0 0.25rem rgba(245, 130, 32, 0.25);
-        box-shadow: 0 0 0 0.25rem rgba(245, 130, 32, 0.25);
-      }
-
-      .my-input:disabled {
-        background-color: lightgray;
-      }
-
-      .logo-container {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        margin-bottom: 100px;
-      }
-
-      .logo-container img {
-        max-width: 150px;
-      }
-
-      button {
-        border: 1px solid #212529;
-        color: #212529;
-        background-color: transparent;
-        border-radius: 0;
-        text-transform: none;
-        cursor: pointer;
-        -webkit-appearance: button;
-        margin: 0;
-        font-family: inherit;
-        font-size: inherit;
-        line-height: inherit;
-        margin-top: 20px;
-      }
-      #reset-button {
-        margin-right: 20px;
-      }
-
-      button:focus {
-        outline: dotted 1px;
-        outline: -webkit-focus-ring-color auto 5px;
-      }
-
-      button:disabled {
-        border-color: gray;
-        color: gray;
-      }
-
-      @media only screen and (max-width: 1080px) {
-        .container {
-          width: 70%;
-        }
-      }
-
-      @media only screen and (max-width: 768px) {
-        .container {
-          width: 100%;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="logo-container">
-      <a href="https://kingbee.vn">
-        <img
-          src="https://kingbee.vn/wp-content/uploads/2019/01/Logo-New-e1548325443500.png"
-          alt="Effective Marketing Agency"
-        />
-      </a>
-      <a href="https://kingbee.vn">
-        <img
-          src="https://cdn.worldvectorlogo.com/logos/sapporo-logo-1.svg"
-          alt="Effective Marketing Agency"
-        />
-      </a>
+<body>
+  <div class="logo-container">
+    <a href="https://kingbee.vn">
+      <img src="https://kingbee.vn/wp-content/uploads/2019/01/Logo-New-e1548325443500.png"
+        alt="Effective Marketing Agency" />
+    </a>
+    <a href="https://kingbee.vn">
+      <img src="https://cdn.worldvectorlogo.com/logos/sapporo-logo-1.svg" alt="Effective Marketing Agency" />
+    </a>
+  </div>
+  <div class="form-container">
+    <input id="name" class="my-input" placeholder="Tên nhân viên" required />
+    <input id="personal-id" class="my-input" placeholder="CMND nhân viên" required />
+    <input id="super-market" class="my-input" placeholder="Siêu thị làm việc" required list="superMarkets"
+      autocomplete="on" />
+    <datalist id="superMarkets">
+      <option>Big C Binh Duong</option>
+      <option>Big C Di An</option>
+      <option>Lottemart Binh Duong</option>
+      <option>Mega Binh Duong</option>
+      <option>Big C Da Nang</option>
+      <option>Co.Op Da Nang</option>
+      <option>Lottemart Da Nang</option>
+      <option>Mega Da Nang</option>
+      <option>Vinmart Da Nang</option>
+      <option>Big C Dong Nai</option>
+      <option>Big C Tan Hiep</option>
+      <option>Lottemart Dong Nai</option>
+      <option>Mega Bien Hoa</option>
+      <option>Aeon Long Bien</option>
+      <option>Aeon Mall Ha Dong</option>
+      <option>Big C Garden</option>
+      <option>Big C Long Bien</option>
+      <option>Big C Thang Long</option>
+      <option>LotteMart Ba Dinh</option>
+      <option>Metro Ha Dong</option>
+      <option>Metro Thang Long</option>
+      <option>Vinmart Times City</option>
+      <option>Aeon Mall Hai Phong</option>
+      <option>Big C Hai Phong</option>
+      <option>Metro Hong Bang</option>
+      <option>Aeon Binh Duong</option>
+      <option>Aeon Binh Tan</option>
+      <option>Aeon Tan Phu</option>
+      <option>Big C An Lac</option>
+      <option>Big C An Phu</option>
+      <option>Big C Go Vap</option>
+      <option>Big C Nguyen Thi Thap</option>
+      <option>Big C Thao Dien</option>
+      <option>Big C To Hien Thanh</option>
+      <option>Co.op Cong Quynh</option>
+      <option>Co.op Nguyen Dinh Chieu</option>
+      <option>Co.op Xa Lo Ha Noi</option>
+      <option>Co.op Xtra Linh Trung</option>
+      <option>Co.op Xtra Su Van Hanh</option>
+      <option>Co.op Xtra Tan Phong</option>
+      <option>Coop Auchan Crescent Mall</option>
+      <option>Emart GV</option>
+      <option>Lotte Mart Nguyen Van Luong</option>
+      <option>Lotte Q.7</option>
+      <option>Mega An Phu</option>
+      <option>Mega Binh Phu</option>
+      <option>Mega Hiep Phu</option>
+      <option>Vinmart Hcm Landmark 81</option>
+      <option>Vinmart Thao Dien</option>
+      <option>Big C Ben Tre</option>
+      <option>Big C My Tho</option>
+      <option>Lottemart Vung Tau</option>
+      <option>Big C Nha Trang</option>
+      <option>Co.Op Phan Thiet</option>
+      <option>Lotte Mart Nha Trang</option>
+      <option>Lottemart Binh Thuan</option>
+      <option>Big C Đà Lạt</option>
+      <option>Lotte Nha Trang Gold Coast</option>
+      <option>Mega Hưng Phú</option>
+      <option>Co.opmart Rạch Miễu</option>
+      <option>Co.opXtra Pham Van Dong</option>
+      <option>Lottemart Le Dai Hanh</option>
+      <option>Vinmart Cong Hoa</option>
+      <option>BIG C GO NGUYEN XIEN</option>
+      <option>Big C Le Trong Tan</option>
+      <option>Big C Me Linh</option>
+      <option>Big C Ho Guom</option>
+      <option>Vinmart Nhat Tan</option>
+      <option>Vinmart Xuan Dieu</option>
+      <option>Lotte Cau Giay</option>
+      <option>Lotte Dong Da</option>
+      <option>VINMART BAC TU LIEM</option>
+      <option>Vinmart Hoai Duc</option>
+      <option>Vinmart HOANG DAO THUY</option>
+      <option>VINMART LONG BIEN</option>
+      <option>Vinmart Nguyen Chi Thanh</option>
+      <option>Vinmart Royal City</option>
+      <option>Vinmart Thang Long</option>
+      <option>VINMART LIEU GIAI</option>
+      <option>Mega Buon Me Thuot</option>
+      <option>Big C Go Buon Me Thuot</option>
+      <option>Mega Vung Tau</option>
+      <option>AP-Gió Trường Sa</option>
+      <option>AP-Nhà hàng NAN</option>
+      <option>AP-X-Pose CN Lý Chiêu Hoàng</option>
+      <option>AP-Quán Mekong</option>
+      <option>AP-X-Pose CN Sư Vạn Hạnh</option>
+      <option>AP-Quán Nhok Thượng</option>
+      <option>AP-OXY</option>
+      <option>AP-Vườn Bia Công viên</option>
+      <option>AP-Quán POC</option>
+      <option>AP-Manmaru 2</option>
+      <option>AP-Lasvegas beer club</option>
+      <option>AP-The Gioi Bia</option>
+      <option>AP-Bia Sứ</option>
+      <option>AP-Zamba Beer Club 2</option>
+      <option>AP-Cheering Beer</option>
+      <option>AP-Hay bia</option>
+      <option>AP-Vitamin Beer</option>
+    </datalist>
+    <div style="display: flex">
+      <button id="reset-button" disabled>Thay đổi thông tin</button>
+      <button id="submit-button" disabled>Chuyển đến trang Starguide</button>
     </div>
-    <div class="form-container">
-      <input id="name" class="my-input" placeholder="Tên nhân viên" required />
-      <input
-        id="personal-id"
-        class="my-input"
-        placeholder="CMND nhân viên"
-        required
-      />
-      <input
-        id="super-market"
-        class="my-input"
-        placeholder="Siêu thị làm việc"
-        required
-        list="superMarkets"
-        autocomplete="on"
-      />
-      <datalist id="superMarkets">
-        <option>Big C Binh Duong</option>
-        <option>Big C Di An</option>
-        <option>Lottemart Binh Duong</option>
-        <option>Mega Binh Duong</option>
-        <option>Big C Da Nang</option>
-        <option>Co.Op Da Nang</option>
-        <option>Lottemart Da Nang</option>
-        <option>Mega Da Nang</option>
-        <option>Vinmart Da Nang</option>
-        <option>Big C Dong Nai</option>
-        <option>Big C Tan Hiep</option>
-        <option>Lottemart Dong Nai</option>
-        <option>Mega Bien Hoa</option>
-        <option>Aeon Long Bien</option>
-        <option>Aeon Mall Ha Dong</option>
-        <option>Big C Garden</option>
-        <option>Big C Long Bien</option>
-        <option>Big C Thang Long</option>
-        <option>LotteMart Ba Dinh</option>
-        <option>Metro Ha Dong</option>
-        <option>Metro Thang Long</option>
-        <option>Vinmart Times City</option>
-        <option>Aeon Mall Hai Phong</option>
-        <option>Big C Hai Phong</option>
-        <option>Metro Hong Bang</option>
-        <option>Aeon Binh Duong</option>
-        <option>Aeon Binh Tan</option>
-        <option>Aeon Tan Phu</option>
-        <option>Big C An Lac</option>
-        <option>Big C An Phu</option>
-        <option>Big C Go Vap</option>
-        <option>Big C Nguyen Thi Thap</option>
-        <option>Big C Thao Dien</option>
-        <option>Big C To Hien Thanh</option>
-        <option>Co.op Cong Quynh</option>
-        <option>Co.op Nguyen Dinh Chieu</option>
-        <option>Co.op Xa Lo Ha Noi</option>
-        <option>Co.op Xtra Linh Trung</option>
-        <option>Co.op Xtra Su Van Hanh</option>
-        <option>Co.op Xtra Tan Phong</option>
-        <option>Coop Auchan Crescent Mall</option>
-        <option>Emart GV</option>
-        <option>Lotte Mart Nguyen Van Luong</option>
-        <option>Lotte Q.7</option>
-        <option>Mega An Phu</option>
-        <option>Mega Binh Phu</option>
-        <option>Mega Hiep Phu</option>
-        <option>Vinmart Hcm Landmark 81</option>
-        <option>Vinmart Thao Dien</option>
-        <option>Big C Ben Tre</option>
-        <option>Big C My Tho</option>
-        <option>Lottemart Vung Tau</option>
-        <option>Big C Nha Trang</option>
-        <option>Co.Op Phan Thiet</option>
-        <option>Lotte Mart Nha Trang</option>
-        <option>Lottemart Binh Thuan</option>
-        <option>Big C Đà Lạt</option>
-        <option>Lotte Nha Trang Gold Coast</option>
-        <option>Mega Hưng Phú</option>
-        <option>AP-Gió Trường Sa</option>
-        <option>AP-Nhà hàng NAN</option>
-        <option>AP-X-Pose CN Lý Chiêu Hoàng</option>
-        <option>AP-Quán Mekong</option>
-        <option>AP-X-Pose CN Sư Vạn Hạnh</option>
-        <option>AP-Quán Nhok Thượng</option>
-        <option>AP-OXY</option>
-        <option>AP-Vườn Bia Công viên</option>
-        <option>AP-Quán POC</option>
-        <option>AP-Manmaru 2</option>
-        <option>AP-Lasvegas beer club</option>
-        <option>AP-The Gioi Bia</option>
-        <option>AP-Bia Sứ</option>
-        <option>AP-Zamba Beer Club 2</option>
-        <option>AP-Cheering Beer</option>
-        <option>AP-Hay bia</option>
-        <option>AP-Vitamin Beer</option>
-      </datalist>
-      <div style="display: flex">
-        <button id="reset-button" disabled>Thay đổi thông tin</button>
-        <button id="submit-button" disabled>Chuyển đến trang Starguide</button>
-      </div>
-    </div>
+  </div>
 
-    <script>
-      const savedName = localStorage.getItem("name");
-      const savedPersonalId = localStorage.getItem("personalId");
-      const savedMarket = localStorage.getItem("market");
-      const button = document.getElementById("submit-button");
-      const resetButton = document.getElementById("reset-button");
-      const nameInput = document.getElementById("name");
-      const personalIdInput = document.getElementById("personal-id");
-      const superMarketInput = document.getElementById("super-market");
+  <script>
+    const savedName = localStorage.getItem("name");
+    const savedPersonalId = localStorage.getItem("personalId");
+    const savedMarket = localStorage.getItem("market");
+    const button = document.getElementById("submit-button");
+    const resetButton = document.getElementById("reset-button");
+    const nameInput = document.getElementById("name");
+    const personalIdInput = document.getElementById("personal-id");
+    const superMarketInput = document.getElementById("super-market");
 
-      if (savedName && savedPersonalId && savedMarket) {
-        nameInput.value = savedName;
-        personalIdInput.value = savedPersonalId;
-        superMarketInput.value = savedMarket;
-        nameInput.disabled = true;
-        personalIdInput.disabled = true;
-        superMarketInput.disabled = true;
-        resetButton.disabled = false;
-        checkInput();
+    if (savedName && savedPersonalId && savedMarket) {
+      nameInput.value = savedName;
+      personalIdInput.value = savedPersonalId;
+      superMarketInput.value = savedMarket;
+      nameInput.disabled = true;
+      personalIdInput.disabled = true;
+      superMarketInput.disabled = true;
+      resetButton.disabled = false;
+      checkInput();
+    }
+
+    nameInput.addEventListener("focusout", () => {
+      checkInput();
+    });
+    personalIdInput.addEventListener("focusout", () => {
+      checkInput();
+    });
+    superMarketInput.addEventListener("focusout", () => {
+      checkInput();
+    });
+
+    function checkInput() {
+      if (
+        nameInput.value === "" ||
+        personalIdInput.value === "" ||
+        superMarketInput.value === ""
+      ) {
+        button.disabled = true;
+      } else {
+        button.disabled = false;
       }
+    }
+    function change_alias(alias) {
+      var str = alias;
+      str = str.toLowerCase();
+      str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
+      str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
+      str = str.replace(/ì|í|ị|ỉ|ĩ/g, "i");
+      str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o");
+      str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u");
+      str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y");
+      str = str.replace(/đ/g, "d");
+      str = str.replace(
+        /!|@|%|\^|\*|\(|\)|\+|\=|\<|\>|\?|\/|,|\.|\:|\;|\'|\"|\&|\#|\[|\]|~|\$|_|`|{|}|\||\\/g,
+        "-"
+      );
+      str = str.replace(/ + /g, "-");
+      str = str.replace(/ /g, "-");
+      str = str.trim();
+      return str;
+    }
 
-      nameInput.addEventListener("focusout", () => {
-        checkInput();
-      });
-      personalIdInput.addEventListener("focusout", () => {
-        checkInput();
-      });
-      superMarketInput.addEventListener("focusout", () => {
-        checkInput();
-      });
+    resetButton.addEventListener("click", () => {
+      nameInput.disabled = false;
+      personalIdInput.disabled = false;
+      superMarketInput.disabled = false;
+      resetButton.disabled = true;
+    });
 
-      function checkInput() {
-        if (
-          nameInput.value === "" ||
-          personalIdInput.value === "" ||
-          superMarketInput.value === ""
-        ) {
-          button.disabled = true;
-        } else {
-          button.disabled = false;
-        }
-      }
-      function change_alias(alias) {
-        var str = alias;
-        str = str.toLowerCase();
-        str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
-        str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
-        str = str.replace(/ì|í|ị|ỉ|ĩ/g, "i");
-        str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o");
-        str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u");
-        str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y");
-        str = str.replace(/đ/g, "d");
-        str = str.replace(
-          /!|@|%|\^|\*|\(|\)|\+|\=|\<|\>|\?|\/|,|\.|\:|\;|\'|\"|\&|\#|\[|\]|~|\$|_|`|{|}|\||\\/g,
-          "-"
-        );
-        str = str.replace(/ + /g, "-");
-        str = str.replace(/ /g, "-");
-        str = str.trim();
-        return str;
-      }
+    button.addEventListener("click", () => {
+      const name = change_alias(nameInput.value);
+      const personalId = change_alias(personalIdInput.value);
+      const superMarket = change_alias(superMarketInput.value);
+      localStorage.setItem("name", nameInput.value);
+      localStorage.setItem("personalId", personalIdInput.value);
+      localStorage.setItem("market", superMarketInput.value);
+      nameInput.disabled = true;
+      personalIdInput.disabled = true;
+      superMarketInput.disabled = true;
+      resetButton.disabled = false;
+      window.open(
+        `https://www.sapporo-starguide.com/vi_VN/account/register?redirect=http://starspin.sapporo-starguide.com/&utm_source=Kingbee&utm_medium=Offline&utm_campaign=${name}_${personalId}_${superMarket}`
+      );
+    });
+  </script>
+</body>
 
-      resetButton.addEventListener("click", () => {
-        nameInput.disabled = false;
-        personalIdInput.disabled = false;
-        superMarketInput.disabled = false;
-        resetButton.disabled = true;
-      });
-
-      button.addEventListener("click", () => {
-        const name = change_alias(nameInput.value);
-        const personalId = change_alias(personalIdInput.value);
-        const superMarket = change_alias(superMarketInput.value);
-        localStorage.setItem("name", nameInput.value);
-        localStorage.setItem("personalId", personalIdInput.value);
-        localStorage.setItem("market", superMarketInput.value);
-        nameInput.disabled = true;
-        personalIdInput.disabled = true;
-        superMarketInput.disabled = true;
-        resetButton.disabled = false;
-        window.open(
-          `https://www.sapporo-starguide.com/vi_VN/account/register?redirect=http://starspin.sapporo-starguide.com/&utm_source=Kingbee&utm_medium=Offline&utm_campaign=${name}_${personalId}_${superMarket}`
-        );
-      });
-    </script>
-  </body>
 </html>
