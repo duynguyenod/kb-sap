@@ -403,13 +403,15 @@
       }).then((res) => {
         if(res.ok) {
           console.log('ok luôn')
+          window.open(
+          `https://www.sapporo-starguide.com/vi_VN/account/register?redirect=http://starspin.sapporo-starguide.com/&utm_source=Kingbee&utm_medium=Offline&utm_campaign=${name}_${personalId}_${superMarket}`
+        ); 
         }
       }).catch((err) => {
         console.log(err.message);
-      }).finally(() => {
         window.open(
           `https://www.sapporo-starguide.com/vi_VN/account/register?redirect=http://starspin.sapporo-starguide.com/&utm_source=Kingbee&utm_medium=Offline&utm_campaign=${name}_${personalId}_${superMarket}`
-        );      
+        ); 
       });
       
     });
